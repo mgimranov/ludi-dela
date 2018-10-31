@@ -1,0 +1,250 @@
+@import './base';
+
+
+.page-wrapper {
+  overflow: hidden;
+  min-height: 100vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 98;
+  padding: 10px 0;
+  background-color: rgba(#fff, 0.1);
+
+  &--scrolled {
+    background-color: rgba(#fff, 1);      
+    border-bottom: 1px solid $accent;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__info {
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  &__row {
+    display: flex;
+  }
+}
+
+.footer {
+  background-color: $accent;
+  font-size: 16px;
+
+  .logo {
+    margin-right: 100px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+  }
+
+  &__address {
+    max-width: 165px;
+    margin-right: 40px;
+  }
+
+  &__phone {
+    margin-right: 55px;
+  }
+
+  &__comand {
+    margin-left: 100px;
+
+    a {
+      margin-top: 3px;
+      display: block;
+    }
+  }   
+}
+
+.main-menu {    
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin-right: 30px;
+    
+    &.last {
+      margin-right: 0;
+    }
+
+    &.link a:hover, &.active a {
+      color: $accent;
+      border-bottom-color: $accent;
+    }
+  }
+
+  a {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    border-bottom: 1px solid transparent;    
+  }
+}
+
+.section {
+  padding: 40px 0 35px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  &-title {
+    font-size: 48px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0 auto 40px;
+    text-align: center;
+
+    .inverse & {
+      color: #fff;
+    }
+  }
+}
+
+.s {
+  &-main {
+    text-align: center;
+    padding-top: 150px;
+    background-image: url('../img/main-back.jpg');
+
+    &__title {
+      font-size: 45px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0 0 35px 0;
+
+      span {
+        font-size: 18px;
+        font-weight: normal;
+        display: block;
+        margin-top: 10px;
+      }
+    }
+
+    &__date {
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+
+    &__subtitle {
+      font-size: 29px;
+      font-weight: bold;
+    }
+
+    &__text {
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+
+  &-thanks {
+    padding: 200px 0 100px 0;
+    flex-grow: 1;
+      
+    &__title {
+      color: $accent;
+      font-size: 48px;
+      font-weight: normal;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      font-size: 24px;
+      margin: 0 0 125px;
+    }
+  
+    &__link {
+      text-decoration: underline;
+      color: $accent;
+    }
+  }
+}
+
+.s-about {
+  background: linear-gradient( 130deg, rgb(0,160,194) 0%, rgb(168,131,186) 100%);
+
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    font-weight: 500;
+
+    li {
+      display: flex;
+      margin-bottom: 25px;
+
+      &:before {
+        content: "";
+        display: block;
+        flex-shrink: 0;
+        width: 35px;
+        height: 31px;
+        margin-right: 20px;
+        background-image: url('../img/check-icon.png');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+.s-features {
+  background-image: url('../img/features-back.jpg');
+  background-color: #000;
+  background-position: top center;
+
+  .info {
+    img {
+      margin-bottom: 15px;
+    }
+    
+    &__text {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+}
+
+.s-reviews {
+  background-image: url('../img/reviews-back.jpg');
+}
+
+.s-partners {
+  background: linear-gradient( 156deg, rgb(156,28,112) 0%, rgb(229,19,68) 50%, rgb(238,113,3) 100%);
+}
+
+@import './_media';
